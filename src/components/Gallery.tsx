@@ -2,27 +2,27 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const galleryImages = [
   {
-    url: "src/assets/work-1.jpeg",
+    url: "assets/work-1.jpeg",
     alt: "Nail art of a anime girl with pink hair and slightly red eyes"
   },
   {
-    url: "src/assets/work-2.jpeg",
+    url: "assets/work-2.jpeg",
     alt: "Elegant nail art"
   },
   {
-    url: "src/assets/work-3.jpeg",
+    url: "assets/work-3.jpeg",
     alt: "White tips on nude nails"
   },
   {
-    url: "src/assets/work-4.jpeg",
+    url: "assets/work-4.jpeg",
     alt: "Bold leopard print design with white/blue tips and nude-coloured nails"
   },
   {
-    url: "src/assets/work-5.jpeg",
+    url: "assets/work-5.jpeg",
     alt: "Elegant nude nails with white tips"
   },
   {
-    url: "src/assets/work-6.jpeg",
+    url: "assets/work-6.jpeg",
     alt: "Beautiful red-tipped nails"
   }
 ];
@@ -48,7 +48,7 @@ export function Gallery() {
               key={index}
               animation={index % 2 === 0 ? "slide-in-left" : "slide-in-right"}
               delay={index * 100}
-              className="group relative aspect-square overflow-hidden rounded-xl md:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
+              className="group relative aspect-square overflow-hidden rounded-xl md:rounded-2xl lg:rounded-full shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={image.url}
