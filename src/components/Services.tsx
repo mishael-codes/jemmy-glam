@@ -40,7 +40,7 @@ const services = [
   }
 ];
 
-export function Services() {
+export function Services({ onOpenPriceList }: { onOpenPriceList?: () => void }) {
   return (
     <section id="services" className="py-16 md:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +53,7 @@ export function Services() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Premium Beauty Services
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-muted-foreground mb-8">
               Experience excellence with my comprehensive range of professional nail and beauty treatments
             </p>
           </div>
@@ -78,6 +78,20 @@ export function Services() {
               </ScrollReveal>
             );
           })}
+        </div>
+
+        <div className="mt-12 md:mt-16 text-center flex justify-center">
+          <ScrollReveal animation="fade-up">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                onOpenPriceList?.();
+              }}
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full hover:bg-primary/90 transition-all hover:scale-105 shadow-md"
+            >
+              View Price List
+            </button>
+          </ScrollReveal>
         </div>
       </div>
     </section>

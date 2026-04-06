@@ -1,7 +1,7 @@
 import { Calendar } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
-export function Hero() {
+export function Hero({ onOpenPriceList }: { onOpenPriceList?: () => void }) {
   return (
     <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 overflow-hidden">
       <div className="absolute inset-0 bg-linear-to-br from-secondary via-white to-accent/30 -z-10" />
@@ -36,12 +36,15 @@ export function Hero() {
                 <Calendar className="w-5 h-5" />
                 Book Appointment
               </a>
-              <a
-                href="#services"
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenPriceList?.();
+                }}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-primary/20 text-foreground rounded-full hover:bg-secondary transition-colors"
               >
-                View Services
-              </a>
+                View Price List
+              </button>
             </div>
 
             <div className="flex items-center gap-8 pt-4">
