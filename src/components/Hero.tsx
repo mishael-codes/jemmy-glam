@@ -64,13 +64,13 @@ export function Hero() {
             <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-pink-400/10 rounded-full blur-3xl" />
             <div className="relative grid grid-cols-2 gap-4">
               <img
-                src="src/assets/hero-1.jpeg"
+                src="hero-1.jpeg"
                 alt="Elegant nail design"
                 className="rounded-2xl shadow-xl object-cover h-64 w-full"
                 loading="lazy"
               />
               <img
-                src="src/assets/hero-2.jpeg"
+                src="hero-2.jpeg"
                 alt="Professional manicure"
                 className="rounded-2xl shadow-xl object-cover h-64 w-full mt-8"
                 loading="lazy"

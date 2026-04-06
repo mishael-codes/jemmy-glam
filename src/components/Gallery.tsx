@@ -2,27 +2,27 @@ import { ScrollReveal } from "./ScrollReveal";
 
 const galleryImages = [
   {
-    url: "assets/work-1.jpeg",
+    url: "work-1.jpeg",
     alt: "Nail art of a anime girl with pink hair and slightly red eyes"
   },
   {
-    url: "assets/work-2.jpeg",
+    url: "work-2.jpeg",
     alt: "Elegant nail art"
   },
   {
-    url: "assets/work-3.jpeg",
+    url: "work-3.jpeg",
     alt: "White tips on nude nails"
   },
   {
-    url: "assets/work-4.jpeg",
+    url: "work-4.jpeg",
     alt: "Bold leopard print design with white/blue tips and nude-coloured nails"
   },
   {
-    url: "assets/work-5.jpeg",
+    url: "work-5.jpeg",
     alt: "Elegant nude nails with white tips"
   },
   {
-    url: "assets/work-6.jpeg",
+    url: "work-6.jpeg",
     alt: "Beautiful red-tipped nails"
   }
 ];
