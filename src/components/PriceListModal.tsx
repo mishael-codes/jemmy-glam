@@ -22,7 +22,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 max-w-screen">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
@@ -30,7 +30,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
       />
       
       {/* Modal Content */}
-      <div className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl p-6 md:p-10 animate-in fade-in zoom-in-95 duration-200">
+      <div className="relative w-full md:max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-3xl shadow-2xl p-4 md:p-10 animate-in fade-in zoom-in-95 duration-200">
         <button 
           onClick={onClose}
           className="absolute top-6 right-6 p-2 rounded-full hover:bg-muted transition-colors"
@@ -40,7 +40,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
         </button>
 
         <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold mb-3">Price List</h2>
+          <h2 className="text-xl md:text-4xl font-bold mb-3">Price List</h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
         </div>
 
@@ -48,7 +48,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
           
           {/* Gel Nails */}
           <div className="bg-secondary/30 p-6 rounded-2xl border border-secondary">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Gel Nails <span className="text-lg font-normal text-muted-foreground">(plain)</span></h3>
+            <h3 className="text-lg md:text-2xl font-semibold mb-6 text-center text-primary">Gel Nails <span className="text-sm font-normal text-muted-foreground">(plain)</span></h3>
             <ul className="space-y-4">
               <li className="flex justify-between items-center border-b border-border/50 pb-2">
                 <span className="font-medium">Short</span>
@@ -75,7 +75,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
 
           {/* Acrylic Nails */}
           <div className="bg-secondary/30 p-6 rounded-2xl border border-secondary">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Acrylic Nails <span className="text-lg font-normal text-muted-foreground">(plain)</span></h3>
+            <h3 className="text-lg md:text-2xl font-semibold mb-6 text-center text-primary">Acrylic Nails <span className="text-sm font-normal text-muted-foreground">(plain)</span></h3>
             <ul className="space-y-4">
               <li className="flex justify-between items-center border-b border-border/50 pb-2">
                 <span className="font-medium">Short</span>
@@ -102,7 +102,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
 
           {/* Toes */}
           <div className="bg-secondary/30 p-6 rounded-2xl border border-secondary">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Toes</h3>
+            <h3 className="text-lg md:text-2xl font-semibold mb-6 text-center text-primary">Toes</h3>
             <ul className="space-y-4">
               <li className="flex justify-between items-center border-b border-border/50 pb-2">
                 <span className="font-medium">Fixing of big toe</span>
@@ -129,7 +129,7 @@ export function PriceListModal({ isOpen, onClose }: PriceListModalProps) {
 
           {/* Add-ons/Extra Charges */}
           <div className="bg-secondary/30 p-6 rounded-2xl border border-secondary">
-            <h3 className="text-2xl font-semibold mb-6 text-center text-primary">Add-Ons / Extra</h3>
+            <h3 className="text-lg md:text-2xl font-semibold mb-6 text-center text-primary">Add-Ons / Extra</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
               <div className="flex justify-between items-center border-b border-border/50 pb-2">
                 <span className="font-medium">Nail Art</span>
