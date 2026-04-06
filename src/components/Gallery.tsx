@@ -48,7 +48,7 @@ export function Gallery() {
               key={index}
               animation={index % 2 === 0 ? "slide-in-left" : "slide-in-right"}
               delay={index * 100}
-              className="group relative aspect-square overflow-hidden rounded-xl md:rounded-2xl lg:rounded-full shadow-md hover:shadow-xl transition-all duration-300"
+              className="group relative aspect-square overflow-hidden rounded-xl md:rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={image.url}
