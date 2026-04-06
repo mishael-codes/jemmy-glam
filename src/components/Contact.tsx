@@ -12,7 +12,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Format the WhatsApp message
     const msg = `Hello Jemmy Glam! I'd like to book an appointment.
 Name: ${formData.name}
@@ -34,123 +34,123 @@ Notes: ${formData.message}`;
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Ready to Transform Your Look?
               </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Book your appointment today and experience luxury beauty services that exceed your expectations.
-            </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                Book your appointment today and experience luxury beauty services that exceed your expectations.
+              </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                  <Phone className="w-6 h-6 text-primary" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Call Me</h3>
+                    <a href="tel:2349132123854" className="text-lg text-primary hover:underline">
+                      +234 913 212 3854
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Call Me</h3>
-                  <a href="tel:2349132123854" className="text-lg text-primary hover:underline">
-                    +234 913 212 3854
-                  </a>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                    <Clock className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Hours</h3>
+                    <p className="text-muted-foreground">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p className="text-muted-foreground">Sat: 1:00 PM - 6:00 PM</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold mb-1">Location</h3>
+                    <p className="text-muted-foreground">Lagos, Nigeria</p>
+                  </div>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Hours</h3>
-                  <p className="text-muted-foreground">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                  <p className="text-muted-foreground">Sat: 1:00 PM - 6:00 PM</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Location</h3>
-                  <p className="text-muted-foreground">Lagos, Nigeria</p>
-                </div>
-              </div>
-            </div>
             </div>
           </ScrollReveal>
 
           <ScrollReveal animation="fade-up" delay={200}>
             <div className="bg-linear-to-br from-primary to-pink-400 rounded-3xl p-8 md:p-12 text-white">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Book Your Appointment
-            </h3>
-            <p className="mb-8 text-white/90">
-              Fill out the form below or call me directly. I'll get back to you within 24 hours.
-            </p>
+              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                Book Your Appointment
+              </h3>
+              <p className="mb-8 text-white/90">
+                Fill out the form below or call me directly. I'll get back to you within 24 hours.
+              </p>
 
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div>
-                <label htmlFor="name" className="block mb-2 text-sm">Full Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  placeholder="Your name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                />
-              </div>
+              <form className="space-y-4" onSubmit={handleSubmit}>
+                <div>
+                  <label htmlFor="name" className="block mb-2 text-sm">Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    required
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="phone" className="block mb-2 text-sm">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  placeholder="Your phone number"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                />
-              </div>
+                <div>
+                  <label htmlFor="phone" className="block mb-2 text-sm">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
+                    placeholder="Your phone number"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    required
+                  />
+                </div>
 
-              <div>
-                <label htmlFor="service" className="block mb-2 text-sm">Service</label>
-                <select
-                  id="service"
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
-                  value={formData.service}
-                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  required
+                <div>
+                  <label htmlFor="service" className="block mb-2 text-sm">Service</label>
+                  <select
+                    id="service"
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    required
+                  >
+                    <option value="" className="text-foreground">Select a service</option>
+                    <option value="gel-manicure" className="text-foreground">Gel Manicure</option>
+                    <option value="acrylic" className="text-foreground">Acrylic Nails</option>
+                    <option value="gel-x" className="text-foreground">Gel X Extensions</option>
+                    <option value="pedicure" className="text-foreground">Pedicure</option>
+                    <option value="brows" className="text-foreground">Brow Services</option>
+                    <option value="waxing" className="text-foreground">Waxing</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block mb-2 text-sm">Additional Notes</label>
+                  <textarea
+                    id="message"
+                    rows={3}
+                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+                    placeholder="Any special requests or questions?"
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-colors flex items-center justify-center gap-2 font-semibold"
                 >
-                  <option value="" className="text-foreground">Select a service</option>
-                  <option value="gel-manicure" className="text-foreground">Gel Manicure</option>
-                  <option value="acrylic" className="text-foreground">Acrylic Nails</option>
-                  <option value="gel-x" className="text-foreground">Gel X Extensions</option>
-                  <option value="pedicure" className="text-foreground">Pedicure</option>
-                  <option value="brows" className="text-foreground">Brow Services</option>
-                  <option value="waxing" className="text-foreground">Waxing</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block mb-2 text-sm">Additional Notes</label>
-                <textarea
-                  id="message"
-                  rows={3}
-                  className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
-                  placeholder="Any special requests or questions?"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-colors flex items-center justify-center gap-2 font-semibold"
-              >
-                <Calendar className="w-5 h-5" />
-                Request Appointment
-              </button>
-            </form>
-          </div>
+                  <Calendar className="w-5 h-5" />
+                  Request Appointment
+                </button>
+              </form>
+            </div>
           </ScrollReveal>
         </div>
       </div>
