@@ -1,4 +1,5 @@
 import { Calendar } from "lucide-react";
+import { ScrollReveal } from "./ScrollReveal";
 
 export function Hero() {
   return (
@@ -7,7 +8,8 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 md:space-y-8">
+          <ScrollReveal animation="fade-up">
+            <div className="space-y-6 md:space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 rounded-full border border-primary/20">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-sm text-accent-foreground">Professional Nail & Beauty Services</span>
@@ -53,9 +55,11 @@ export function Hero() {
                 <div className="text-sm text-muted-foreground">Client Rating</div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
-          <div className="relative">
+          <ScrollReveal animation="fade-in" delay={300}>
+            <div className="relative">
             <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-pink-400/10 rounded-full blur-3xl" />
             <div className="relative grid grid-cols-2 gap-4">
@@ -72,7 +76,8 @@ export function Hero() {
                 loading="lazy"
               />
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

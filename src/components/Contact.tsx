@@ -1,5 +1,6 @@
 import { Phone, MapPin, Clock, Calendar } from "lucide-react";
 import { useState } from "react";
+import { ScrollReveal } from "./ScrollReveal";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -28,10 +29,11 @@ Notes: ${formData.message}`;
     <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Look?
-            </h2>
+          <ScrollReveal animation="fade-up">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Transform Your Look?
+              </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Book your appointment today and experience luxury beauty services that exceed your expectations.
             </p>
@@ -70,9 +72,11 @@ Notes: ${formData.message}`;
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
-          <div className="bg-linear-to-br from-primary to-pink-400 rounded-3xl p-8 md:p-12 text-white">
+          <ScrollReveal animation="fade-up" delay={200}>
+            <div className="bg-linear-to-br from-primary to-pink-400 rounded-3xl p-8 md:p-12 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Book Your Appointment
             </h3>
@@ -147,6 +151,7 @@ Notes: ${formData.message}`;
               </button>
             </form>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
