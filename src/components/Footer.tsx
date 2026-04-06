@@ -6,8 +6,8 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
-              It's a Glam
+            <h3 className="text-xl font-semibold mb-4 bg-linear-to-r from-primary to-pink-400 bg-clip-text text-transparent leading-relaxed">
+              <span className="font-allura text-3xl mr-1">Jemmy</span> Glam
             </h3>
             <p className="text-white/70 text-sm">
               Your premier destination for luxury nail and beauty services in Las Vegas.
@@ -42,40 +42,25 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
                 <a href="tel:7025509900" className="hover:text-primary transition-colors">
-                  (702) 550-9900
+                  +234 913 212 3854
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Las Vegas, NV</span>
+                <span>Lagos, Nigeria</span>
               </li>
-              <li className="flex items-center gap-2">
+              {/* <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
-                <a href="mailto:info@itsaglam.com" className="hover:text-primary transition-colors">
-                  info@itsaglam.com
+                <a href="mailto:[EMAIL_ADDRESS]" className="hover:text-primary transition-colors">
+                  [EMAIL_ADDRESS]
                 </a>
-              </li>
+              </li> */}
             </ul>
-
-            <div className="flex items-center gap-3 mt-4">
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                {/* <Instagram className="w-4 h-4" /> */}
-              </a>
-              <a
-                href="#"
-                className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
-              >
-                {/* <Facebook className="w-4 h-4" /> */}
-              </a>
-            </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-sm text-white/50">
-          <p>&copy; 2026 Jemmy Glam. All rights reserved.</p>
+          <p>&copy; 2026 <span className="font-allura text-base">Jemmy</span> Glam. All rights reserved.</p>
         </div>
       </div>
     </footer>

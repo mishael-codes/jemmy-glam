@@ -3,13 +3,13 @@ import { Award, Clock, Heart, Shield } from "lucide-react";
 const features = [
   {
     icon: Award,
-    title: "Expert Technicians",
-    description: "Certified professionals with years of experience in nail artistry"
+    title: "Expert Artist",
+    description: "A professional with years of experience in nail artistry"
   },
   {
     icon: Shield,
     title: "Premium Products",
-    description: "We use only the highest quality, salon-grade products"
+    description: "I use only the highest quality, salon-grade products"
   },
   {
     icon: Heart,
@@ -25,14 +25,14 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-secondary via-accent/20 to-white">
+    <section className="py-16 md:py-24 bg-linear-to-br from-secondary via-accent/20 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Why Choose It's a Glam?
+            Why Choose <span className="font-allura text-4xl mr-1">Jemmy</span> Glam?
           </h2>
           <p className="text-lg text-muted-foreground">
-            Experience the difference of true beauty professionals who care about your satisfaction
+            Experience the difference of a dedicated beauty professional who cares about your satisfaction
           </p>
         </div>
 

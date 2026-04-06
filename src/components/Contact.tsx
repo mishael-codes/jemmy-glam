@@ -1,7 +1,29 @@
 import { Phone, MapPin, Clock, Calendar } from "lucide-react";
-import React = require("react");
+import { useState } from "react";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    service: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Format the WhatsApp message
+    const msg = `Hello Jemmy Glam! I'd like to book an appointment.
+Name: ${formData.name}
+Phone: ${formData.phone}
+Service: ${formData.service}
+Notes: ${formData.message}`;
+
+    const encodedMsg = encodeURIComponent(msg);
+    // Open WhatsApp in a new tab (using +234 for Nigeria assuming 0702... format)
+    window.open(`https://wa.me/2349132123854?text=${encodedMsg}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,49 +38,49 @@ export function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Call Us</h3>
-                  <a href="tel:7025509900" className="text-lg text-primary hover:underline">
-                    (702) 550-9900
+                  <h3 className="font-semibold mb-1">Call Me</h3>
+                  <a href="tel:2349132123854" className="text-lg text-primary hover:underline">
+                    +234 913 212 3854
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
                   <Clock className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Hours</h3>
-                  <p className="text-muted-foreground">Mon - Sat: 9:00 AM - 7:00 PM</p>
-                  <p className="text-muted-foreground">Sun: 10:00 AM - 6:00 PM</p>
+                  <p className="text-muted-foreground">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                  <p className="text-muted-foreground">Sat: 1:00 PM - 6:00 PM</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Location</h3>
-                  <p className="text-muted-foreground">Las Vegas, NV</p>
+                  <p className="text-muted-foreground">Lagos, Nigeria</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-primary to-pink-500 rounded-3xl p-8 md:p-12 text-white">
+          <div className="bg-linear-to-br from-primary to-pink-400 rounded-3xl p-8 md:p-12 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Book Your Appointment
             </h3>
             <p className="mb-8 text-white/90">
-              Fill out the form below or call us directly. We'll get back to you within 24 hours.
+              Fill out the form below or call me directly. I'll get back to you within 24 hours.
             </p>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm">Full Name</label>
                 <input
@@ -66,6 +88,9 @@ export function Contact() {
                   id="name"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
                   placeholder="Your name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  required
                 />
               </div>
 
@@ -75,7 +100,10 @@ export function Contact() {
                   type="tel"
                   id="phone"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  placeholder="(702) 555-0000"
+                  placeholder="Your phone number"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
                 />
               </div>
 
@@ -84,6 +112,9 @@ export function Contact() {
                 <select
                   id="service"
                   className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
+                  value={formData.service}
+                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  required
                 >
                   <option value="" className="text-foreground">Select a service</option>
                   <option value="gel-manicure" className="text-foreground">Gel Manicure</option>
@@ -102,6 +133,8 @@ export function Contact() {
                   rows={3}
                   className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
                   placeholder="Any special requests or questions?"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
               </div>
 

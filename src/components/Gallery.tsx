@@ -1,27 +1,27 @@
 const galleryImages = [
   {
-    url: "https://images.unsplash.com/photo-1772322586754-34c9e6f5be6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "French manicure with glitter accents"
+    url: "src/assets/work-1.jpeg",
+    alt: "Nail art of a anime girl with pink hair and slightly red eyes"
   },
   {
-    url: "https://images.unsplash.com/photo-1772322586634-9867476143b9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Blue almond-shaped nails with silver tips"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1772322586785-3a34772cbc61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "White nails with purple marbled tips"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1772322586702-73125782bd99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Blue and white ombre nails"
-  },
-  {
-    url: "https://images.unsplash.com/photo-1659391542239-9648f307c0b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw5fHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    url: "src/assets/work-2.jpeg",
     alt: "Elegant nail art"
   },
   {
-    url: "https://images.unsplash.com/photo-1746607242420-12fc2604775d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8bmFpbCUyMHNhbG9uJTIwbWFuaWN1cmUlMjBlbGVnYW50fGVufDF8fHx8MTc3NTM0ODk4OHww&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Beautiful ombre nails"
+    url: "src/assets/work-3.jpeg",
+    alt: "White tips on nude nails"
+  },
+  {
+    url: "src/assets/work-4.jpeg",
+    alt: "Bold leopard print design with white/blue tips and nude-coloured nails"
+  },
+  {
+    url: "src/assets/work-5.jpeg",
+    alt: "Elegant nude nails with white tips"
+  },
+  {
+    url: "src/assets/work-6.jpeg",
+    alt: "Beautiful red-tipped nails"
   }
 ];
 
@@ -31,10 +31,10 @@ export function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Work
+            My Work
           </h2>
           <p className="text-lg text-muted-foreground">
-            Browse our portfolio of stunning nail designs and transformations
+            Browse my portfolio of stunning nail designs and transformations
           </p>
         </div>
 
@@ -48,8 +48,9 @@ export function Gallery() {
                 src={image.url}
                 alt={image.alt}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
         </div>

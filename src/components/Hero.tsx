@@ -15,7 +15,7 @@ export function Hero() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Elevate Your{" "}
-              <span className="bg-linear-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-primary to-pink-400 bg-clip-text text-transparent">
                 Beauty
               </span>
               <br />
@@ -23,7 +23,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-xl">
-              Indulge in luxury nail care and beauty treatments. Our expert technicians bring your vision to life with precision and care.
+              Indulge in luxury nail care and beauty treatments. I bring your vision to life with precision and personalized care.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -57,17 +57,19 @@ export function Hero() {
 
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-pink-500/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-pink-400/10 rounded-full blur-3xl" />
             <div className="relative grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1772322586754-34c9e6f5be6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="src/assets/hero-1.jpeg"
                 alt="Elegant nail design"
                 className="rounded-2xl shadow-xl object-cover h-64 w-full"
+                loading="lazy"
               />
               <img
-                src="https://images.unsplash.com/photo-1772322586785-3a34772cbc61?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxuYWlsJTIwc2Fsb24lMjBtYW5pY3VyZSUyMGVsZWdhbnR8ZW58MXx8fHwxNzc1MzQ4OTg4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                src="src/assets/hero-2.jpeg"
                 alt="Professional manicure"
                 className="rounded-2xl shadow-xl object-cover h-64 w-full mt-8"
+                loading="lazy"
               />
             </div>
           </div>

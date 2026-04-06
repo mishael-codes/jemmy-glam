@@ -5,37 +5,37 @@ const services = [
     icon: Hand,
     title: "Gel Manicure",
     description: "Long-lasting gel polish that stays flawless for weeks. Perfect shine and durability.",
-    price: "From $45"
+    price: "2000"
   },
   {
     icon: Sparkles,
     title: "Acrylic Nails",
     description: "Strong, beautiful acrylic extensions customized to your desired length and shape.",
-    price: "From $55"
+    price: "6000"
   },
   {
     icon: Sparkles,
     title: "Gel X Extensions",
     description: "The latest in nail extension technology. Lightweight, natural-looking, and damage-free.",
-    price: "From $65"
+    price: "2500"
   },
   {
     icon: Hand,
     title: "Pedicure",
     description: "Relaxing spa pedicure with massage, exfoliation, and polish of your choice.",
-    price: "From $40"
+    price: "2000"
   },
   {
     icon: Eye,
     title: "Brow Services",
     description: "Professional brow shaping and tinting to frame your face perfectly.",
-    price: "From $25"
+    price: "1000"
   },
   {
     icon: Scissors,
     title: "Waxing",
     description: "Professional waxing services for smooth, hair-free skin that lasts.",
-    price: "From $20"
+    price: "5000"
   }
 ];
 
@@ -46,13 +46,13 @@ export function Services() {
         <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/50 rounded-full border border-primary/20 mb-4">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm text-accent-foreground">Our Services</span>
+            <span className="text-sm text-accent-foreground">My Services</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Premium Beauty Services
           </h2>
           <p className="text-lg text-muted-foreground">
-            Experience excellence with our comprehensive range of professional nail and beauty treatments
+            Experience excellence with my comprehensive range of professional nail and beauty treatments
           </p>
         </div>
 
@@ -69,7 +69,7 @@ export function Services() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
-                <div className="text-primary font-semibold">{service.price}</div>
+                <div className="text-primary font-semibold">From &#8358;{service.price}</div>
               </div>
             );
           })}

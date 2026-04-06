@@ -6,8 +6,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex items-center gap-2">
-            <span className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
-             Jemmy Glam
+            <span className="text-xl md:text-2xl font-semibold bg-linear-to-r from-primary to-pink-400 bg-clip-text text-transparent">
+              <span className="font-allura text-3xl md:text-4xl mr-1">Jemmy</span> <span className="text-black">Glam</span>
             </span>
           </div>
 
