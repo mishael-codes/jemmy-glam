@@ -10,7 +10,7 @@ export function Footer() {
               <span className="font-allura text-3xl mr-1">Jemmy</span> Glam
             </h3>
             <p className="text-white/70 text-sm">
-              Your premier destination for luxury nail and beauty services in Las Vegas.
+              Your premier destination for luxury nail and beauty services in Lagos, Nigeria.
             </p>
           </div>
 
