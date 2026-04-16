@@ -31,7 +31,7 @@ export function Hero({ onOpenPriceList }: { onOpenPriceList?: () => void }) {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all hover:scale-105 animation-pulse"
               >
                 <Calendar className="w-5 h-5" />
                 Book Appointment

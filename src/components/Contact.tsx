@@ -10,7 +10,7 @@ export function Contact() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
 
     // Format the WhatsApp message
@@ -68,7 +68,7 @@ Notes: ${formData.message}`;
                   </div>
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground">Lagos, Nigeria</p>
+                    <p className="text-muted-foreground">College of Nursing, Idiaraba, LUTH, Lagos, Nigeria</p>
                   </div>
                 </div>
               </div>

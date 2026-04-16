@@ -47,7 +47,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Lagos, Nigeria</span>
+                <span>College of Nursing, Idiaraba, LUTH, Lagos, Nigeria</span>
               </li>
               {/* <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary" />
