@@ -12,7 +12,7 @@ export default function App() {
   const [isPriceListOpen, setIsPriceListOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       <main>
         <Hero onOpenPriceList={() => setIsPriceListOpen(true)} />
