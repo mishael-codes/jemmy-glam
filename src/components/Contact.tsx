@@ -1,8 +1,10 @@
-import { Phone, MapPin, Clock, Calendar } from "lucide-react";
+import { Phone, MapPin, Clock, Calendar, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { ScrollReveal } from "./ScrollReveal";
 
 export function Contact() {
+  const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -12,17 +14,25 @@ export function Contact() {
 
   const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
-
+    setLoading(true);
+    if(!formData.name || !formData.phone || !formData.service){
+      setErrorMessage("Please fill in all the required fields");
+      setLoading(false)
+      return;
+    }
     // Format the WhatsApp message
     const msg = `Hello Jemmy Glam! I'd like to book an appointment.
-Name: ${formData.name}
-Phone: ${formData.phone}
-Service: ${formData.service}
-Notes: ${formData.message}`;
+      Name: ${formData.name}
+      Phone: ${formData.phone}
+      Service: ${formData.service}
+      Notes: ${formData.message}`;
 
-    const encodedMsg = encodeURIComponent(msg);
-    // Open WhatsApp in a new tab (using +234 for Nigeria assuming 0702... format)
-    window.open(`https://wa.me/2349132123854?text=${encodedMsg}`, '_blank');
+    setTimeout(() => {
+      const encodedMsg = encodeURIComponent(msg);
+      // Open WhatsApp in a new tab (using +234 for Nigeria assuming 0702... format)
+      window.open(`https://wa.me/2349132123854?text=${encodedMsg}`, '_blank');
+      setLoading(false)
+    }, 500)
   };
 
   return (
@@ -86,7 +96,7 @@ Notes: ${formData.message}`;
 
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label htmlFor="name" className="block mb-2 text-sm">Full Name</label>
+                  <label htmlFor="name" className="block mb-2 text-sm">Full Name <span title="This field is required" className="text-black cursor-pointer">*</span></label>
                   <input
                     type="text"
                     id="name"
@@ -94,12 +104,11 @@ Notes: ${formData.message}`;
                     placeholder="Your name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block mb-2 text-sm">Phone Number</label>
+                  <label htmlFor="phone" className="block mb-2 text-sm">Phone Number <span title="This field is required" className="text-black cursor-pointer">*</span></label>
                   <input
                     type="tel"
                     id="phone"
@@ -107,18 +116,17 @@ Notes: ${formData.message}`;
                     placeholder="Your phone number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    required
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block mb-2 text-sm">Service</label>
+                  <label htmlFor="service" className="block mb-2 text-sm">Service <span title="This field is required" className="text-black cursor-pointer">*</span></label>
                   <select
                     id="service"
                     className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50"
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    required
+                   
                   >
                     <option value="" className="text-foreground">Select a service</option>
                     <option value="gel-manicure" className="text-foreground">Gel Manicure</option>
@@ -141,13 +149,27 @@ Notes: ${formData.message}`;
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
-
+                <i className="text-black mb-2">{errorMessage}</i>
                 <button
                   type="submit"
-                  className="w-full px-8 py-4 bg-white text-primary rounded-full hover:bg-white/90 transition-colors flex items-center justify-center gap-2 font-semibold"
+                  disabled={loading}
+                  className={`w-full px-8 py-4 rounded-full transition-all flex items-center justify-center gap-2 font-semibold disabled:cursor-not-allowed ${
+                    loading 
+                      ? 'bg-primary text-white scale-[0.98] cursor-not-allowed' 
+                      : 'bg-white text-primary hover:bg-white/90 active:scale-[0.98]'
+                  }`}
                 >
-                  <Calendar className="w-5 h-5" />
-                  Request Appointment
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <span>Processing...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Calendar className="w-5 h-5" />
+                      Request Appointment
+                    </>
+                  )}
                 </button>
               </form>
             </div>

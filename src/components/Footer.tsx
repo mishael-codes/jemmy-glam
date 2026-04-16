@@ -10,7 +10,7 @@ export function Footer() {
               <span className="font-allura text-3xl mr-1">Jemmy</span> Glam
             </h3>
             <p className="text-white/70 text-sm">
-              Your premier destination for luxury nail and beauty services in Lagos, Nigeria.
+              Your premier destination for luxury nail and beauty services at the College of Nursing, Idiaraba, LUTH, Lagos, Nigeria.
             </p>
           </div>
 
