@@ -31,7 +31,7 @@ export function WhyChooseUs() {
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose <span className="font-allura text-4xl mr-1">Jemmy</span> Glam?
+              Why Choose <span className="font-allura text-4xl md:text-5xl mr-1 text-pink-400">Jemmy</span> Glam?
             </h2>
             <p className="text-lg text-muted-foreground">
               Experience the difference of a dedicated beauty professional who cares about your satisfaction
