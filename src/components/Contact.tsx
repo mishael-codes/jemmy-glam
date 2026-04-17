@@ -162,12 +162,12 @@ export function Contact() {
                   {loading ? (
                     <>
                       <Loader2 className="w-5 h-5 animate-spin" />
-                      <span>Processing...</span>
+                      <span>Opening WhatsApp...</span>
                     </>
                   ) : (
                     <>
                       <Calendar className="w-5 h-5" />
-                      Request Appointment
+                      Request Appointment via WhatsApp
                     </>
                   )}
                 </button>
