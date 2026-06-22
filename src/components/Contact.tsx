@@ -90,7 +90,7 @@ export function Contact() {
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
                 Book Your Appointment
               </h3>
-              <p className="mb-8 text-white/90">
+              <p className="mb-8 text-white/90 font-semibold">
                 Fill out the form below or call me directly. I'll get back to you within 24 hours.
               </p>
 

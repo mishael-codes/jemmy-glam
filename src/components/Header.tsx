@@ -25,10 +25,11 @@ export function Header() {
 
           <a
             href="tel:+2349132123854"
-            className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 md:px-6 md:py-2.5 font-semibold bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">Call Now</span>
+            Call Now
+            {/* <span className="hidden sm:inline">Call Now</span> */}
           </a>
         </div>
       </div>
